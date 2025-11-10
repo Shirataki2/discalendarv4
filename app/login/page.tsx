@@ -1,21 +1,31 @@
-import { login, signup } from './actions'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { login, signup } from "./actions";
 
 export default function LoginPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 p-4">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-br from-slate-50 to-slate-100 p-4 dark:from-slate-950 dark:to-slate-900">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold tracking-tight mb-2">DisCalendar</h1>
-          <p className="text-muted-foreground">アカウントにログインまたはサインアップ</p>
+          <h1 className="mb-2 font-bold text-4xl tracking-tight">
+            DisCalendar
+          </h1>
+          <p className="text-muted-foreground">
+            アカウントにログインまたはサインアップ
+          </p>
         </div>
 
         <Card>
-          <Tabs defaultValue="login" className="w-full">
+          <Tabs className="w-full" defaultValue="login">
             <CardHeader>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="login">ログイン</TabsTrigger>
@@ -31,9 +41,9 @@ export default function LoginPage() {
                     <Input
                       id="email-login"
                       name="email"
-                      type="email"
                       placeholder="name@example.com"
                       required
+                      type="email"
                     />
                   </div>
                   <div className="space-y-2">
@@ -41,14 +51,14 @@ export default function LoginPage() {
                     <Input
                       id="password-login"
                       name="password"
-                      type="password"
                       placeholder="••••••••"
                       required
+                      type="password"
                     />
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button formAction={login} className="w-full" size="lg">
+                  <Button className="w-full" formAction={login} size="lg">
                     ログイン
                   </Button>
                 </CardFooter>
@@ -66,9 +76,9 @@ export default function LoginPage() {
                     <Input
                       id="email-signup"
                       name="email"
-                      type="email"
                       placeholder="name@example.com"
                       required
+                      type="email"
                     />
                   </div>
                   <div className="space-y-2">
@@ -76,14 +86,14 @@ export default function LoginPage() {
                     <Input
                       id="password-signup"
                       name="password"
-                      type="password"
                       placeholder="••••••••"
                       required
+                      type="password"
                     />
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button formAction={signup} className="w-full" size="lg">
+                  <Button className="w-full" formAction={signup} size="lg">
                     アカウント作成
                   </Button>
                 </CardFooter>
@@ -92,10 +102,10 @@ export default function LoginPage() {
           </Tabs>
         </Card>
 
-        <p className="text-center text-sm text-muted-foreground mt-4">
+        <p className="mt-4 text-center text-muted-foreground text-sm">
           続行することで、利用規約とプライバシーポリシーに同意したものとみなされます
         </p>
       </div>
     </main>
-  )
+  );
 }
