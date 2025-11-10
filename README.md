@@ -42,4 +42,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] ログインページをshadcn/uiのCardコンポーネントでモダンなデザインに改修
 - [x] ホームページをモダンなランディングページデザインに改修
 - [x] 変更をテストして動作確認
-- [ ] Gitコミットを実行
+- [x] Gitコミットを実行
